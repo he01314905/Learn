@@ -57,6 +57,28 @@ public static void main(String[] args) {
 		System.out.printf("\n%d\t%d\t%d\t",sparseArr[i][0],sparseArr[i][1],sparseArr[i][2]);
 	}
 	System.out.println();
+	
+	//將稀疏矩陣 --> 恢復成二維陣列
+	
+	//1. 先讀取稀疏矩陣第一行,根據第一行數據,創建原始二維陣列
+	
+	int chessArr2[][]=new int[sparseArr[0][0]][sparseArr[0][1]];
+	//2. 讀取後幾行的數據,並賦值給原始二維振烈
+	
+	for(int i = 1 ; i < sparseArr.length; i++) {
+		chessArr2[sparseArr[i][0]][sparseArr[i][1]]=sparseArr[i][2];
+	}
+	//輸出恢復後的二維陣列
+	System.out.println();
+	System.out.println("恢復後的二維陣列:");
+	
+	for(int[] row : chessArr2) {
+		for(int data : row) {
+			System.out.printf("%d\t",data);
+		}
+		System.out.println();
+	}
+	
 }
 
 }
