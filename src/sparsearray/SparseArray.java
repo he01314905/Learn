@@ -63,7 +63,7 @@ public static void main(String[] args) {
 	//1. 先讀取稀疏矩陣第一行,根據第一行數據,創建原始二維陣列
 	
 	int chessArr2[][]=new int[sparseArr[0][0]][sparseArr[0][1]];
-	//2. 讀取後幾行的數據,並賦值給原始二維振烈
+	//2. 讀取後幾行的數據,並賦值給原始二維陣列
 	
 	for(int i = 1 ; i < sparseArr.length; i++) {
 		chessArr2[sparseArr[i][0]][sparseArr[i][1]]=sparseArr[i][2];
